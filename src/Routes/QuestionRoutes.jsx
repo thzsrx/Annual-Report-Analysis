@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { DataProvider } from "../Context/QuestionContext.jsx";
 
-import Question from "../../src/Question.jsx";
+import Question from "../Layouts/Question.jsx";
 import Questions from "../pages/Questions/Questions.jsx";
 
 const QuestionRoutes = () => {

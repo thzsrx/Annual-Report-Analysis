@@ -18,7 +18,7 @@ const Sidebar = () => {
             <h2>Menu</h2>
 
             <ul style={{ listStyle: "none", paddingTop: "10px" }}>
-                <li><Link to="/">Go to Home</Link></li>
+                <li><Link to="/">All Data</Link></li>
                 <li><Link to="/ProfitAndLoss">ProfitAndLoss</Link></li>
                 <li><Link to="/BalanceSheet">BalanceSheet</Link></li>
                 <li><Link to="/CashFlow">CashFlow</Link></li>

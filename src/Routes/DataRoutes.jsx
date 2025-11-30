@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { DataProvider } from "../Context/DataContext.jsx";
 
-import Home from "../../src/Home.jsx";
+import Home from "../../src/All_Data.jsx";
 
 // Profit and Loss 
 import TotalOperatingRevenue from "../pages/Profit and Loss/Total_operating_revenue.jsx";

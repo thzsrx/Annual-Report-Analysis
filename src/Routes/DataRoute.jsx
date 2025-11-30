@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { DataProvider } from "../Context/DataContext.jsx";
 
-import Home from "../../src/Home.jsx";
+import AllData from "../../src/All_Data.jsx";
 import ProfitAndLoss from "../pages/Profit and Loss/ProfitAndLoss";
 import BalanceSheet from "../pages/Balance sheet/BalanceSheet.jsx";
 import CashFlow from "../pages/Cashflow/Cashflow.jsx";
@@ -15,7 +15,7 @@ const DataRoute = () => {
     return (
         <DataProvider>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<AllData />} />
                 <Route path="/ProfitAndLoss" element={<ProfitAndLoss />} />
                 <Route path="/BalanceSheet" element={<BalanceSheet />} />
                 <Route path="/CashFlow" element={<CashFlow />} />
