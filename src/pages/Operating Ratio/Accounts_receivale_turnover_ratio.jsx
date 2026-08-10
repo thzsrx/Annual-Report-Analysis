@@ -10,8 +10,9 @@ const Accounts_receivale_turnover_ratio = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setAccountsReceivaleTurnoverRatioData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setAccountsReceivaleTurnoverRatioData(rounded);
     };
 
     return (

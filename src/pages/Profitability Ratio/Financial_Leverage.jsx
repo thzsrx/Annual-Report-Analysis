@@ -10,8 +10,9 @@ const Finanical_Leverage = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setFinancialLeverageData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setFinancialLeverageData(rounded);
     };
 
     return (

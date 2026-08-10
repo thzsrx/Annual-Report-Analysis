@@ -10,14 +10,15 @@ const Share_capital = () => {
 
     const handleResult = () => {
         const total = value1 * value2;
-        setresult(total);
-        setSCData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setSCData(rounded);
     };
 
     return (
         <>
             <div>
-                <h1>Share Capital: {result}</h1>
+                <h1>Shareholder Capital: {result}</h1>
                 <div>
                     <label> Face value:
                         <input type="number" value={value1} onChange={(e) => setvalue1(Number(e.target.value))} />

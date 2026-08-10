@@ -1,5 +1,6 @@
 import { useData } from "./Context/DataContext.jsx";
-import YearSelect from "./Layouts/YearSelect.jsx";
+import YearSelect from "./YearSelect.jsx";
+import { useYear } from "./Context/YearContext.jsx";
 
 const Home = () => {
     const { divData } = useData();
@@ -66,12 +67,15 @@ const Home = () => {
     const { LowerIntrinsicValueData } = useData();
     const { UpperIntrinsicValueData } = useData();
 
+    const { setYear } = useYear();
+
     const handleYearChange = (year) => {
-        console.log("Received year:", year);
+        setYear(year);
     };
+
     return (
         <div>
-            <h1>🏠 Home Component</h1>
+            <h1>🏠 All Data Component</h1>
             <div>
                 <div>
                     <h2>Year Selector</h2>
@@ -81,7 +85,7 @@ const Home = () => {
                 <br /> <strong>Profit before tax:</strong> {PBTData || "No data yet"}
                 <br /> <strong>Profit after tax:</strong> {PATData || "No data yet"}
                 <br /> <strong>Earning per shares:</strong> {EPSData || "No data yet"}
-
+                <hr />
                 {/* Balance Sheet */}
                 <br /> <strong>Shareholder Equity:</strong> {SEData || "No data yet"}
                 <br /> <strong>Shareholder Capital:</strong> {SCData || "No data yet"}
@@ -94,10 +98,11 @@ const Home = () => {
                 <br /> <strong>Gross Block:</strong> {GBData || "No data yet"}
                 <br /> <strong>Total Depreciation:</strong> {TDData || "No data yet"}
                 <br /> <strong>Net Block:</strong> {NBData || "No data yet"}
-
+                <hr />
                 {/* Cash Flow */}
                 <br /> <strong>Cash Flow:</strong> {CFData || "No data yet"}
 
+                <hr />
                 {/* Profitability Ratio */}
                 <br /> <strong>Operating Revenue:</strong> {ORData || "No data yet"}
                 <br /> <strong>Operating Expenses:</strong> {OEData || "No data yet"}
@@ -115,6 +120,7 @@ const Home = () => {
                 <br /> <strong>Overall Capital Employed:</strong> {OverallCapitalEmployedData || "No data yet"}
                 <br /> <strong>Ebit:</strong> {EbitData || "No data yet"}
 
+                <hr />
                 {/* Leverage Ratio */}
                 <br /> <strong>Interest Coverage Ratio:</strong> {InterestCoverageRatioData || "No data yet"}
                 <br /> <strong>Earning Before Interest And Tax:</strong> {EarningBeforeInterestAndTaxData || "No data yet"}
@@ -124,6 +130,7 @@ const Home = () => {
                 <br /> <strong>Debt To Assets Ratio:</strong> {DebtToAssetsRatioData || "No data yet"}
                 <br /> <strong>Finanical Leverage Ratio:</strong> {FinancialLeverageRatioData || "No data yet"}
 
+                <hr />
                 {/* Operating Ratio */}
                 <br /> <strong>Fixed Assets Turnover:</strong> {FixedAssetsTurnoverData || "No data yet"}
                 <br /> <strong>Working Capital:</strong> {WorkingCapitalData || "No data yet"}
@@ -134,6 +141,7 @@ const Home = () => {
                 <br /> <strong>Accounts Receivale Turnover Ratio:</strong> {AccountsReceivaleTurnoverRatioData || "No data yet"}
                 <br /> <strong>Days Sales Outstanding:</strong> {DaysSalesOutstandingData || "No data yet"}
 
+                <hr />
                 {/* Valuation Ratio */}
                 <br /> <strong>Price To Sales Ratio:</strong> {PriceToSalesRatioData || "No data yet"}
                 <br /> <strong>Sales Per Share:</strong> {SalesPerShareData || "No data yet"}
@@ -141,6 +149,7 @@ const Home = () => {
                 <br /> <strong>BookValue:</strong> {BookValueData || "No data yet"}
                 <br /> <strong>Price To Earning Ratio:</strong> {PriceToEarningRatioData || "No data yet"}
 
+                <hr />
                 {/* Other Formula */}
                 <br /> <strong>Gross Profit Margin:</strong> {GrossProfitMarginData || "No data yet"}
                 <br /> <strong>Gross Profit:</strong> {GrossProfitData || "No data yet"}

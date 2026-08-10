@@ -11,8 +11,9 @@ const CAGR = () => {
 
     const handlecal = () => {
         const total = (value1 / value2) ^ 1 / value3 - 1;
-        setresult(total);
-        setCAGRData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setCAGRData(rounded);
     };
 
     return (

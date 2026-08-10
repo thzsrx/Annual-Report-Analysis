@@ -10,8 +10,9 @@ const Price_to_sales_ratio = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setPriceToSalesRatioData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setPriceToSalesRatioData(rounded);
     };
 
     return (

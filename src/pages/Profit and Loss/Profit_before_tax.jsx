@@ -10,8 +10,9 @@ const Profile = () => {
 
     const handleSubtract = () => {
         const total = numberValue - numberValue1 - numberValue2;
-        setResult(total);
-        setPBTData(`${total}`);
+        const rounded = parseFloat(total.toFixed(3));
+        setResult(rounded);
+        setPBTData(rounded);
     };
 
     return (

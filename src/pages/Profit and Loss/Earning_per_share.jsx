@@ -9,8 +9,9 @@ const Earning_per_share = () => {
 
     const handleresult = () => {
         const total = value1 / value2;
-        setEPSData(`${total}`);
-        setresult(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setEPSData(rounded);
+        setresult(rounded);
     }
 
     return (

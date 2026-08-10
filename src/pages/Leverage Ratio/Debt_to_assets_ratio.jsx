@@ -10,8 +10,9 @@ const Debt_to_assets_ratio = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setDebtToAssetsRatioData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setDebtToAssetsRatioData(rounded);
     };
 
     return (

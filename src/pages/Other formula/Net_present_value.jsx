@@ -11,8 +11,9 @@ const Net_present_value = () => {
 
     const handlecal = () => {
         const total = value1 / (1 + value2) ^ value3;
-        setNetPresentValueData(total);
-        setresult(total)
+        const rounded = parseFloat(total.toFixed(3));
+        setNetPresentValueData(rounded);
+        setresult(rounded);
     }
     return (
         <>

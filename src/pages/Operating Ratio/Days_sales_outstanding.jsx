@@ -9,8 +9,9 @@ const Days_sales_outstanding = () => {
 
     const handlecal = () => {
         const total = 365 / value1;
-        setresult(total);
-        setDaysSalesOutstandingData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setDaysSalesOutstandingData(rounded);
     };
 
     return (

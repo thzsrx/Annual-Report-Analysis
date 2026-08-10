@@ -10,22 +10,18 @@ const Profile = () => {
 
     const handleAddition = () => {
         const total = numberValue + numberValue1 + numberValue2;
-        setResult(total);
-        setDivData(`${total}`);
+        const rounded = parseFloat(total.toFixed(3));
+        setResult(rounded);
+        setDivData(rounded);
     };
 
     return (
         <>
             <div>
                 <h3>Total Operating Revenue: {result}</h3>
-
                 <label>
                     Sale of services:
-                    <input
-                        type="number"
-                        value={numberValue}
-                        onChange={(e) => setNumberValue(Number(e.target.value))}
-                    />
+                    <input type="number" value={numberValue} onChange={(e) => setNumberValue(Number(e.target.value))} />
                 </label>
                 <br />
                 <label>

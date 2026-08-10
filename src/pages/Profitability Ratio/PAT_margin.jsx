@@ -10,8 +10,9 @@ const EbitdaMargin = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setPatMarginData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setPatMarginData(rounded);
     };
 
     return (

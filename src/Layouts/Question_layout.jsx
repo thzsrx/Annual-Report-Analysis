@@ -1,7 +1,7 @@
 import { questionData } from "../Context/QuestionContext.jsx";
-import YearSelect from "./YearSelect.jsx";
+import { useYear } from "../Context/YearContext.jsx";
 
-const Home = () => {
+const Question_layout = () => {
     const { Question1Data } = questionData();
     const { Question2Data } = questionData();
     const { Question3Data } = questionData();
@@ -22,19 +22,13 @@ const Home = () => {
     const { Question18Data } = questionData();
     const { Question19Data } = questionData();
 
+    const { year } = useYear();
 
-
-    const handleYearChange = (year) => {
-        console.log("Received year:", year);
-    };
     return (
         <div>
             <h1>Question Component</h1>
             <div>
-                <div>
-                    <h2>Year Selector</h2>
-                    <YearSelect onYearChange={handleYearChange} />
-                </div>
+                {year ? <p>Year: {year}</p> : <p>No year selected yet.</p>}
                 <br /> <strong>Question1:</strong> {Question1Data || "No data yet"}
                 <br /> <strong>Qusetion2:</strong> {Question2Data || "No data yet"}
                 <br /> <strong>Qusetion3:</strong> {Question3Data || "No data yet"}
@@ -60,4 +54,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Question_layout;

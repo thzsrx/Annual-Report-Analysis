@@ -10,8 +10,9 @@ const Gross_profit_margin = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setGrossProfitMarginData(total);
-        setresult(total)
+        const rounded = parseFloat(total.toFixed(3));
+        setGrossProfitMarginData(rounded);
+        setresult(rounded);
     }
     return (
         <>

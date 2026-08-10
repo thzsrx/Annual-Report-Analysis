@@ -11,8 +11,9 @@ const Terminal_value = () => {
 
     const handlecal = () => {
         const total = value1 * (1 + value2) / value3 - value2;
-        setTerminalValueData(total);
-        setresult(total)
+        const rounded = parseFloat(total.toFixed(3));
+        setTerminalValueData(rounded);
+        setresult(rounded);
     }
     return (
         <>

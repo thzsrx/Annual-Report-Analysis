@@ -10,8 +10,9 @@ const Share_price = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setSharePriceData(total);
-        setresult(total)
+        const rounded = parseFloat(total.toFixed(3));
+        setSharePriceData(rounded);
+        setresult(rounded);
     }
     return (
         <>

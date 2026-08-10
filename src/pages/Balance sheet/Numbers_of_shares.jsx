@@ -10,8 +10,9 @@ const Number_of_shares = () => {
 
     const handleResult = () => {
         const total = value1 / value2;
-        setresult(total);
-        setNOSData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setNOSData(rounded);
     };
     return (
         <>

@@ -12,13 +12,12 @@ const Gross_block = () => {
     const handleAddition = () => {
         const total = value1 + value2 + value3;
         setResult(total);
-        setGBData(`${total}`);
+        setGBData(total);
     };
 
     return (
         <>
             <div>
-                <h1>👤 Profile Component</h1>
                 <div>
                     <h3>Total Liability: {result}</h3>
 

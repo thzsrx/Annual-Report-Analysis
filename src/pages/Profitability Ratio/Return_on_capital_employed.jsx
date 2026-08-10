@@ -10,8 +10,9 @@ const Return_on_Capital_Employed = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setReturnOncapitalEmployedData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setReturnOncapitalEmployedData(rounded);
     };
 
     return (

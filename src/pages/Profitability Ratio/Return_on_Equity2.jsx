@@ -10,8 +10,9 @@ const Return_on_Equity2 = () => {
 
     const handlecal = () => {
         const total = value1 / value2 * 100;
-        setresult(total);
-        setReturnOnEquity2Data(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setReturnOnEquity2Data(rounded);
     };
 
     return (

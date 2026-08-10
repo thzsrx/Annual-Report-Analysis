@@ -10,8 +10,9 @@ const Profit_after_tax = () => {
 
     const handleCal = () => {
         const total = value1 - value2;
-        setresult(total);
-        setPATData(`${total}`);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded)
+        setPATData(rounded);
 
     };
     return (

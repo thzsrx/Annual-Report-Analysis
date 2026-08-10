@@ -10,8 +10,9 @@ const Interest_Coverage_Ratio = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setInterestCoverageRatioData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setInterestCoverageRatioData(rounded);
     };
 
     return (
