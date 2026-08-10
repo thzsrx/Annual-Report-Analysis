@@ -9,8 +9,9 @@ const Inventory_number_of_days = () => {
 
     const handlecal = () => {
         const total = 365 / value1;
-        setresult(total);
-        setInventoryNumberOfDaysData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setInventoryNumberOfDaysData(rounded);
     };
 
     return (

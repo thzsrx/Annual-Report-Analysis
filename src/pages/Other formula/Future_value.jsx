@@ -11,8 +11,9 @@ const Future_value = () => {
 
     const handlecal = () => {
         const total = value1 * (1 + value2) ^ value3;
-        setFutureValueData(total);
-        setresult(total)
+        const rounded = parseFloat(total.toFixed(3));
+        setFutureValueData(rounded);
+        setresult(rounded);
     }
     return (
         <>

@@ -10,8 +10,9 @@ const Debt_to_equity_ratio = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setDebtToEquityRatioData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setDebtToEquityRatioData(rounded);
     };
 
     return (

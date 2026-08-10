@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useData } from "../../Context/DataContext.jsx";
 
 const Book_value = () => {
@@ -11,8 +11,9 @@ const Book_value = () => {
 
     const handlecal = () => {
         const total = value1 + value2 / value3;
-        setresult(total);
-        setBookValueData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setBookValueData(rounded);
     };
 
     return (

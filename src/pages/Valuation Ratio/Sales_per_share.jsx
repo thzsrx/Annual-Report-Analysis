@@ -10,8 +10,9 @@ const Sales_per_share = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setSalesPerShareData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setSalesPerShareData(rounded);
     };
 
     return (

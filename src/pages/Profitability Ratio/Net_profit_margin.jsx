@@ -10,8 +10,9 @@ const Net_Profit_Margin = () => {
 
     const handlecal = () => {
         const total = value1 / value2 * 100;
-        setresult(total);
-        setNetProfitMarginData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setNetProfitMarginData(rounded);
     };
 
     return (

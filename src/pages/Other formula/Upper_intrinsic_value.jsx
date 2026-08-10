@@ -9,9 +9,11 @@ const Upper_intrinsic_value = () => {
 
     const handlecal = () => {
         const total = value1 * (1 + 0.10);
-        setUpperIntrinsicValueData(total);
-        setresult(total)
+        const rounded = parseFloat(total.toFixed(3));
+        setUpperIntrinsicValueData(rounded);
+        setresult(rounded);
     }
+
     return (
         <>
             <div>

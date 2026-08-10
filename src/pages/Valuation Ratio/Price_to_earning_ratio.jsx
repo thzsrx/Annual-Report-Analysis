@@ -10,8 +10,9 @@ const Price_to_earning_ratio = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setPriceToEarningRatioData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setPriceToEarningRatioData(rounded);
     };
 
     return (

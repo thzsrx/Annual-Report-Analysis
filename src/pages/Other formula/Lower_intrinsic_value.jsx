@@ -9,8 +9,9 @@ const Lower_intrinsic_value = () => {
 
     const handlecal = () => {
         const total = value1 * (1 - 0.10);
-        setLowerIntrinsicValueData(total);
-        setresult(total)
+        const rounded = parseFloat(total.toFixed(3));
+        setLowerIntrinsicValueData(rounded);
+        setresult(rounded);
     }
     return (
         <>

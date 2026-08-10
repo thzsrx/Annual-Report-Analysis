@@ -10,16 +10,15 @@ const Total_Liability = () => {
 
     const handleAddition = () => {
         const total = value1 + value2 + value3;
-        setResult(total);
-        setTLData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setResult(rounded);
+        setTLData(rounded);
     };
 
     return (
         <div>
-            <h1>👤 Profile Component</h1>
             <div>
                 <h3>Total Liability: {result}</h3>
-
                 <label>
                     Shareholder’s funds:
                     <input

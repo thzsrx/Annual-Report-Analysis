@@ -11,8 +11,9 @@ const shareholder_equity = () => {
 
     const handleresult = () => {
         const total = value1 - value2;
-        setresult(total);
-        setSEData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setSEData(rounded);
     }
 
     return (

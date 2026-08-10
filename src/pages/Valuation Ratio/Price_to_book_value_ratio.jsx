@@ -10,8 +10,9 @@ const Price_to_book_value_ratio = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setPriceToBookValueRatioData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setPriceToBookValueRatioData(rounded);
     };
 
     return (

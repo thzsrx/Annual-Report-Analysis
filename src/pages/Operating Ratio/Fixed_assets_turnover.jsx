@@ -10,8 +10,9 @@ const Fixed_assets_turnover = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setFixedAssetsTurnoverData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setFixedAssetsTurnoverData(rounded);
     };
 
     return (
@@ -19,12 +20,12 @@ const Fixed_assets_turnover = () => {
             <div>
                 <h2>Fixed Assets Turnover: {result}</h2>
                 <div>
-                    <lable>Operating Revenue:
+                    <label>Operating Revenue:
                         <input type="number" value={value1} onChange={(e) => setvalue1(Number(e.target.value))} />
-                    </lable>
-                    <lable>Total Average Asset:
+                    </label>
+                    <label>Total Average Asset:
                         <input type="number" value={value2} onChange={(e) => setvalue2(Number(e.target.value))} />
-                    </lable>
+                    </label>
                     <button onClick={handlecal}>Result</button>
                 </div>
             </div>

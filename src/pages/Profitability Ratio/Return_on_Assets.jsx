@@ -12,8 +12,9 @@ const Return_on_Asset = () => {
 
     const handlecal = () => {
         const total = value1 + value2 * (1 - value3) / value4;
-        setresult(total);
-        setReturnOnAssetData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setReturnOnAssetData(rounded);
     };
 
     return (

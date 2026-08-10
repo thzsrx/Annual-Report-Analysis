@@ -10,8 +10,9 @@ const Total_assets_turnover = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setTotalAssetsTurnoverData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setTotalAssetsTurnoverData(rounded);
     };
 
     return (

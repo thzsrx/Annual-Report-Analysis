@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useData } from "../../Context/DataContext.jsx";
 
 const Working_capital_turnover = () => {
@@ -10,8 +10,9 @@ const Working_capital_turnover = () => {
 
     const handlecal = () => {
         const total = value1 / value2;
-        setresult(total);
-        setWorkingCapitalTurnoverData(total);
+        const rounded = parseFloat(total.toFixed(3));
+        setresult(rounded);
+        setWorkingCapitalTurnoverData(rounded);
     };
 
     return (
